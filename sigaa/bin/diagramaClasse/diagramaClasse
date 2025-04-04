@@ -1,0 +1,75 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+Class Aluno {
+    -int matricula
+    #List<Turma> turmaAluno
+    #List<Aula> aula
+}
+
+Class Professor {
+    -int registro
+    #List<Turma> turmaMinistrando
+}
+
+Class Disciplina {
+    -int codigo
+    -String nome
+    -int cargaHoraria
+    #Fase fase
+}
+
+Class Aula {
+    -int codigoAula
+    -Date data
+    -int cargaHorariaAula
+    #Turma turmaAula
+    #Professor professorAula
+    #List<Aluno> alunoParticiparam
+}
+
+Class Curso {
+    -int codigo
+    -String nome
+}
+
+Class Fase {
+    -int codigo
+    -int ano
+    -int semestre
+    #Curso curso
+}
+
+Class Turma {
+    -int codigoTurma
+    -String situacaoTurma
+    -Date dataInicio    
+    #List<Aluno> alunoTurma
+    #List<Professor> professorTurma
+    
+}
+
+Class Avaliacao {
+    -int codigoAvaliacao
+    -Date data
+    #Turma turma
+    #Professor professorAula
+    #List<Aluno> alunoParticiparam
+
+}
+
+Curso "1" *-- "*" Fase
+Fase "1" o-- "*" Disciplina
+
+Disciplina <|-- Turma 
+Turma "*" o-- "*" Aluno
+Turma "*" o-- "1..4" Professor
+Aula "*" o-- "1" Professor
+Aula "*" o-- "*" Aluno
+Aula "*" o-- "1" Turma
+Avaliacao "*" o-- "1" Professor
+Avaliacao "*" o-- "*" Aluno
+Avaliacao "*" o-- "1" Turma
+
+@enduml
+

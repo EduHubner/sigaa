@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<curso>
+        
+    <Curso>
+                
+        <codigo>3</codigo>
+                
+        <nome>Matemática</nome>
+            
+    </Curso>
+       
+    
+    <Curso>
+                
+        <codigo>1</codigo>
+                
+        <nome>BCC</nome>
+            
+    </Curso>
+        
+    <Curso>
+            
+        
+        <codigo>2</codigo>
+                        
+        
+        <nome>Pedagogia</nome>
+                   
+    
+    </Curso>
+       
+
+    <Curso>
+        <codigo>5</codigo>
+        <nome>ADM</nome>
+    </Curso>
+</curso>

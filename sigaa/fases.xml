@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fases>
+    <Fase>
+        <codigoFase>1</codigoFase>
+        <ano>2024</ano>
+        <semestre>1</semestre>
+        <codigoCurso>1</codigoCurso>
+    </Fase>
+</fases>
